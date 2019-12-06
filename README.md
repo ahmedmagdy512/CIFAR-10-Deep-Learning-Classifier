@@ -11,6 +11,7 @@ exactly 5000 images from each class.
 To tackle this classification problem 
 # 1 - Data preprocessing:
 A- Load the data , review a sample of it
+
 B- Perform one-hot enconding to labels because most machine learning algorithms 
    require numerical input and output variables
    After encoding : 
