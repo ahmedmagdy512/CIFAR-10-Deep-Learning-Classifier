@@ -11,13 +11,16 @@ exactly 5000 images from each class.
 To tackle this classification problem 
 # 1 - Data preprocessing:
 A- Load the data , show a sample of the images in the dataset. 
+
 B- Perform normalization for the training data and test data by dividing values in each image by 255 as it's easier 
    for the model that way to have values in range [0,1] than values in range [0,255]
+   
 C- Perform one-hot enconding to labels because most machine learning algorithms 
    require numerical input and output variables
    After encoding : 
    each label will be an array of size 10 as they are 10 classes
     let say car will be encoded as [0,0,1,0,0,0,0,0,0,0] 
+    
 # 2 - Constructing the model
    Deep learning models are constructed in this way: 
       Convolutional Layer ---> Pooling Layer ----> Flatten Layer ---> Output Layer
