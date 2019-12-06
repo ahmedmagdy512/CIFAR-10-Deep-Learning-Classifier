@@ -7,3 +7,26 @@ The test batch contains exactly 1000 randomly-selected images from each class.
 The training batches contain the remaining images in random order, but some training batches
 may contain more images from one class than another. Between them, the training batches contain
 exactly 5000 images from each class.
+
+To tackle this classification problem 
+# 1 - Data preprocessing:
+A- Load the data , review a sample of it
+B- Perform one-hot enconding to labels because most machine learning algorithms 
+   require numerical input and output variables
+   After encoding : 
+   each label will be an array of size 10 as they are 10 classes
+    let say car will be encoded as [0,0,1,0,0,0,0,0,0,0] 
+# 2 - Constructing the model
+   Deep learning models are constructed in this way: 
+      Convolutional Layer ---> Pooling Layer ----> Flatten Layer ---> Output Layer
+      in order to achieve high accuracy you can increase the number of blocks ( Conv + Pool )
+      as well as BatchNomalization Layer but beware of Overfitting your model 
+      = To reduce overfitting you can add Dropout Layer 
+# 3 - Fitting the model to the data
+    The imageGenerator class from keras.imagepreprocessing allows you to apply Data Augmentation (Horizontal flip, 
+    vertical flip,zoom and so on )
+    =In this model I tried 10 epochs and got 76.650% test accuracy and that's not bad for that number of epochs
+    maybe for 100 epochs this model can achieve 85+ test accuracy 
+# 4 - Evaluating the model
+    Test the model accuracy when it predicts the output of the testdata and obtain the accuracy percentage and 
+    the loss that we try to minimize
